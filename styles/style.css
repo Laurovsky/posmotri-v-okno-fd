@@ -77,17 +77,6 @@ html {
   width: fit-content;
 }
 
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid white;
-  outline-offset: 1px;
-}
-
-
-
-.search-form__textfield:focus {
-  outline: none;
-}
-
 .search-form__textfield {
   min-width: 225px;
   min-height: 27px;
@@ -100,6 +89,19 @@ html {
   font-size: 18px;
   background-color: transparent;
   appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__label:has(:active) {
+  outline: none;
 }
 
 .search-form__textfield::placeholder {
