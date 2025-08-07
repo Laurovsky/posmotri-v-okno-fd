@@ -46,7 +46,7 @@ html {
   align-items: center;
   gap: 30px;
   align-self: end;
-  margin: 133px 30px;
+  margin: auto 30px;
 }
 
 .result {
@@ -62,7 +62,7 @@ html {
 
 .result__video {
   width: 100%;
-  height: 100%;
+  max-height: 386px;
   object-fit: cover;
   object-position: center;
 }
@@ -70,22 +70,23 @@ html {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 25px;
   width: 100%;
   height: 100%;
-  margin-top: 18px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: -6px;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: -8px;
 }
 
 .search-form__fieldset {
@@ -144,8 +145,8 @@ html {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  outline: 1px solid white;
   padding: 1px;
+  outline: 1px solid white;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -162,6 +163,18 @@ html {
   cursor: pointer;
 }
 
+.search-form__label:active {
+  text-decoration: none;
+}
+
+.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__checkbox:checked:active + .search-form__pseudo-checkbox::after {
+  opacity: 0;
+}
+
 .search-form__label:has(.search-form__textfield:hover) {
   text-decoration: none;
 }
@@ -171,7 +184,7 @@ html {
 }
 
 .title {
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -182,7 +195,7 @@ html {
   color: grey;
 }
 
-.content__card-link_current{
+.content__card-link_current {
   background-color: #545050;
 }
 
@@ -216,9 +229,10 @@ html {
 }
 
 .content__video-card-title {
+  min-width: 0;
   max-width: 196px;
   overflow: hidden;
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -243,6 +257,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 399px;
   height: 298px;
   overflow-y: auto;
 }
@@ -265,12 +280,12 @@ html {
 }
 
 .button {
+  height: 34px;
   border: 1px solid white;
   color: white;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  height: 34px;
   background-color: transparent;
 }
 
@@ -292,6 +307,7 @@ html {
 }
 
 .button:active {
+  text-decoration: none;
   background-color: #545050;
 }
 
